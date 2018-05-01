@@ -60,7 +60,7 @@
 ---
 
 ### REST Development
-- URI cung cấp một cơ chế đơn giản và minh bạch để đặt tên các dịch vụ REST từ xa
+- URI (định dạng tài nguyên thông nhất) cung cấp một cơ chế đơn giản và minh bạch để đặt tên các dịch vụ REST từ xa
 - Các dịch vụ dựa trên REST đều sử dụng phương pháp truy cập chuẩn để tham số hóa các yêu cầu được thực hiện từ client đến REST server
 ---
 
@@ -97,7 +97,6 @@
 ---
 
 ### REST Development
-- **Phương thức:**
 
  3) Phương thức PUT: Sử dụng để cập nhật dữ liệu của resource. Dữ liệu được cập nhật bằng cách xác định resource bằng URI. Nếu không tồn tại resource sẽ tạo ra một resource mới
  
