@@ -255,11 +255,11 @@ Thiết kế nhớt(viscous design)
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
 **SOLID**
-- **S:**Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
-- **O:**Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
-- **L:**Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
-- **I:**Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
-- **D:**Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
+- (**S:**)**Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
+- (**O:**)**Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
+- (**L:**)**Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
+- (**I:**)**Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
+- (**D:**)**Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
 ---
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
