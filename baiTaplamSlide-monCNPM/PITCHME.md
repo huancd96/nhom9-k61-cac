@@ -217,11 +217,48 @@
 ---
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
-- **Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
-- **Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
-- **Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
-- **Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
-- **Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
+-	Tính linh hoạt của hệ thống phần mềm là có thể thiết kế theo nhiều cách khác nhau
+Một số yêu cầu về hệ thống phần mềm
+-	Cần dễ hiểu
+-	Cần chuẩn đoán và sửa lỗi một cách dễ dàng và nhanh chóng
+-	Đáp ứng được các thay đổi và cải tiến trong tương lai
+---
+
+#### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
+**NHỮNG THIẾT KẾ PHẦN MỀM KÉM**
+1)Thiết kế cứng nhắc(rigid designing)
+-	Là thiết kế chống lại sự thay đổi
+-	Là thách thức trong thực tế vì mất nhiều nỗ lực để thay đổi
+-	Xác định các rủi ro trong tương lai khó khăn
+---
+
+#### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
+2)Thiết kế mong manh(design fragility)
+-	Phát sinh khi có một thiết kế dễ bị phá vỡ
+-	Tạo ra nhiều giả định khi chạy chương trình
+---
+
+#### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
+3)Thiết kế bất động(immobility design)
+-	Các dòng code không độc đáo
+-	Thường được tìm kiếm và sao chép vào trong các hệ thống
+-	Tiềm ẩn nhiều rủi ro
+---
+
+#### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
+Thiết kế nhớt(viscous design)
+-	Dễ vi phạm hơn là tuân tủ các quy tắc thiết kế
+-	Dễ bị hacker tấn công vào hệ thống
+---
+
+
+#### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
+**SOLID**
+- **S****Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
+- **O****Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
+- **L****Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
+- **I****Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
+- **D****Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
 ---
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
