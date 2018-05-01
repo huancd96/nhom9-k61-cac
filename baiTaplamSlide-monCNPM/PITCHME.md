@@ -226,6 +226,7 @@ Một số yêu cầu về hệ thống phần mềm
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
 **NHỮNG THIẾT KẾ PHẦN MỀM KÉM**
+
 1)Thiết kế cứng nhắc(rigid designing)
 -	Là thiết kế chống lại sự thay đổi
 -	Là thách thức trong thực tế vì mất nhiều nỗ lực để thay đổi
@@ -254,11 +255,11 @@ Thiết kế nhớt(viscous design)
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
 **SOLID**
-- **S****Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
-- **O****Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
-- **L****Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
-- **I****Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
-- **D****Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
+- **S:**Nguyên tắc đơn nhiệm (Simple responcibility princibles)**
+- **O:**Nguyên tắc Đóng và Mở (Open / Closed principle (OCP) )**
+- **L:**Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )**
+- **I:**Nguyên tắc chia nhỏ Interface (Interface segregation principle (ISP) )**
+- **D:**Nguyên tắc tương thích động (Dependency Inversion principle (DIP) )**
 ---
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
