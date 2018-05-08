@@ -24,7 +24,6 @@
  
 ---
 
-### REST Development
 **Mô hình RPC(Remote Procedure Calls)**
 ![alt](http://pubs.opengroup.org/onlinepubs/9629399/c7060601.gif)
 
