@@ -16,11 +16,11 @@
 ### Một số vấn đề của RPC
 
 
- 1) Không linh hoạt thay đổi kể từ khi nó giả định một mối quan hệ tĩnh giữa máy khách và máy chủ tại thời gian chạy
+ 1) Không linh hoạt thay đổi kể từ khi nó giả định một mối quan hệ tĩnh giữa máy khách và máy chủ tại thời gian chạy,
  
  2) RPC được dựa trên mô hình lập trình thủ tục/ cấu trúc, nó đã lỗi thời với các mô hình hướng đối tượng,
  
- 3) RPC thiếu minh bạch vị trí, bảo mật lời gọi RPC cần mã hóa, chữ kí,... phức tạp khiến độ trễ cao hơn .
+ 3) RPC thiếu minh bạch vị trí, bảo mật lời gọi RPC cần mã hóa, chữ kí,... phức tạp khiến độ trễ cao hơn.
  
 ---
 
@@ -51,7 +51,7 @@
 ---
 
 ### Hạn chế kiến trúc của REST
-**1) Về việc thực hiện yêu cầu của ng dùng**
+**1) Về việc thực hiện yêu cầu của người dùng**
 - URI cung cấp một cơ chế đơn giản và minh bạch đặt tên các dịch vụ REST từ xa
 - Các dịch vụ REST đều dùng phương pháp truy cập chuẩn để tham số hóa các yêu cầu được thực hiện từ client đến REST server
 ---
@@ -72,8 +72,8 @@
 ### Hạn chế kiến trúc của REST
 **3) Về văn bản tự mô tả**
 - Rào cản kiến trúc cuối cùng là REST dựa trên tài liệu văn bản tự mô tả
-- phản hồi từ một server, ngoài dữ liệu còn có các link chuyển tiếp khác giúp bạn hiểu các hành động bạn có thể làm với dữ liệu phản hồi này
--> chúng ta phải làm các dịch vụ REST trở thành “no state”, làm tăng khả năng mở rộng của chúng.
+- Phản hồi từ một server, ngoài dữ liệu còn có các link chuyển tiếp khác giúp bạn hiểu các hành động bạn có thể làm với dữ liệu phản hồi này
+-> Chúng ta phải làm các dịch vụ REST trở thành “no state”, làm tăng khả năng mở rộng của chúng.
 
 ### Các phương thức chủ yếu trong REST
 
@@ -93,12 +93,12 @@
 
 ### Idempotent
 - Hầu hết các yêu cầu REST nên là idempotent (sau nhiều lần gọi, nó vẫn trả về kết quả như nhau)
-- Điều này có nghĩa là nếu người dùng thực hiện cùng một yêu cầu nhiều lần, cùng một hành động sẽ diễn ra. 
+- Điều này có nghĩa là nếu người dùng thực hiện cùng một yêu cầu nhiều lần, cùng một hành động sẽ diễn ra
 
 ---
 
 ### Dữ liệu phản hồi
-- Khi một phản hồi được trả về từ một dịch vụ **REST** chứa hai thành phần chính: header và thân.
+- Khi một phản hồi được trả về từ một dịch vụ REST chứa hai thành phần chính: header và thân
 - Header chứa tất cả các loại siêu dữ liệu khác nhau, nhưng một phần quan trọng là mã trạng thái
 - Một danh sách sô là các mã trạng thái chuẩn được sử dụng phổ biến. VD:  số 200 cho yêu cầu thành công, 404 cho việc không thấy tài nguyên,...
 ---
@@ -126,7 +126,7 @@
 ---
 
 ### Giao tiếp phi trạng thái (stateless communication)
-- Khuyết điểm: gia tăng lượng thông tin cần truyền tải giữa client và server.
+- Khuyết điểm: gia tăng lượng thông tin cần truyền tải giữa client và server
 - Khía cạnh quan trọng khác: Hạn chế stateless cô lập các client đối với những thay đổi trên server 
 ---
 
@@ -138,59 +138,59 @@
 ---
 
 ### Chuẩn hóa các interface
-- Các quy ước này áp dụng cho toàn bộ các service giúp cho người sử dụng hệ thống của bạn dễ dùng hơn. 
-- VD: hệ thống bạn đặt ra 1 chuẩn API để người dùng dù là mobile, web đều có thể kết nối vào được. 
-- Hệ thống REST có yếu điểm ở đây vì khi chuẩn hóa rồi ta không thế tối ưu từng kết nối.
+- Các quy ước này áp dụng cho toàn bộ các service giúp cho người sử dụng hệ thống của bạn dễ dùng hơn
+- VD: hệ thống bạn đặt ra 1 chuẩn API để người dùng dù là mobile, web đều có thể kết nối vào được
+- Hệ thống REST có yếu điểm ở đây vì khi chuẩn hóa rồi ta không thế tối ưu từng kết nối
 ---
 
 ### Chú ý
-- API REST nên nhỏ để không rò rỉ chi tiết thực hiện nội bộ.
-- Ngoài ra, nên xem xét khả năng sử dụng của chúng để khách hàng có thể sử dụng hiệu quả.
+- API REST nên nhỏ để không rò rỉ chi tiết thực hiện nội bộ
+- Ngoài ra, nên xem xét khả năng sử dụng của chúng để khách hàng có thể sử dụng hiệu quả
 - Với một API linh hoạt, API có thể được sử dụng bởi nhiều client khác nhau bằng nhiều cách khác nhau
 -> Tăng tính linh hoạt cho client.
 ---
 
 ### GHÉP NỐI (COUPLING)
-- Ghép nối là độ đo của độ phụ thuộc lẫn nhau giữa các lớp trong chương trình máy tính.
+- Ghép nối là độ đo của độ phụ thuộc lẫn nhau giữa các lớp trong chương trình máy tính
 - Ghép nối thực sự là vấn đề trong thực tế bởi vì có một ảnh hưởng mạnh mẽ đến cách duy trì và cải tiến hệ thống
-- Lý do: Với một lớp chương trình chặt chẽ với một lớp khác, thực hiện thay đổi lớp đó có thể gây ra lỗi trong các lớp khác.
+- Lý do: Với một lớp chương trình chặt chẽ với một lớp khác, thực hiện thay đổi lớp đó có thể gây ra lỗi trong các lớp khác
 ---
 
 ### GHÉP NỐI (COUPLING)
 - Hơn nữa, nếu sửa lỗi hoặc thêm một tính năng mới vào hệ thống, cần phải sửa mã ở nhiều nơi khác nhau
 -> Có thể gây ra lỗi ở nhiều nơi khác nhau, khó khăn để quản lý hệ thống 
-- Điều này cũng cho thấy một thách thức về sử dụng lại.
+- Điều này cũng cho thấy một thách thức về sử dụng lại
 - Các lớp độc lập nhỏ hơn thì sẽ tốt hơn nhiều so với các lớp kết hợp với nhau quá chặt chẽ
 ---
 
 ### GHÉP NỐI (COUPLING)
-- Và giảm thiểu càng nhiều càng tốt các ràng buộc kiểm soát dòng tồn tại giữa các mô-đun.
+- Và giảm thiểu càng nhiều càng tốt các ràng buộc kiểm soát dòng tồn tại giữa các mô-đun
 - Tóm lại, một thiết kế tốt sẽ cho các ghép nối thiếu chặt chẽ (loose coupling), ghép nối là điều cần giảm thiểu
 ---
 
 ### SỰ GẮN KẾT (CONHESION)
 - Sự gắn kết nói về nhiệm vụ của từng lớp 
 - Sự gắn kết là biện pháp để đánh giá mức độ liên kết chặt chẽ trách nhiệm của các trường trong một đơn vị thực hiện (lớp)
-- Vì vậy, các biện pháp gắn kết là làm thế nào tập trung tốt các phương pháp và các trường trong một lớp.
+- Vì vậy, các biện pháp gắn kết là làm thế nào tập trung tốt các phương pháp và các trường trong một lớp
 ---
 
 ### SỰ GẮN KẾT (CONHESION)
 
-- Các lớp có độ gắn kết thấp, chịu trách nhiệm cho một loạt các hành động đa dạng.
--> Khó khăn cho một nhà phát triển khi nhìn vào một lớp và thực sự hiểu những gì đang thực hiện.
-- Cản trở việc duy trì và phát triển phần mềm.
+- Các lớp có độ gắn kết thấp, chịu trách nhiệm cho một loạt các hành động đa dạng
+-> Khó khăn cho một nhà phát triển khi nhìn vào một lớp và thực sự hiểu những gì đang thực hiện
+- Cản trở việc duy trì và phát triển phần mềm
 - Nhiệm vụ của từng lớp càng rõ ràng và tách biệt thì cohesion càng cao (high cohesion)
--> Đó là mục tiêu cần đạt tới 
+-> Đó là mục tiêu cần đạt tới
 ---
 
 ### SỰ GẮN KẾT (CONHESION)
-- Các lớp gắn kết thường có một tập nhỏ các trường private, các methord trong lớp sẽ hoạt động trên những mảng đó.
-- Nếu một nhiệm vụ sử dụng nhiều hơn một mảng thì sẽ có thể liên kết chặt chẽ với các mục tiêu tổng thể của lớp.
+- Các lớp gắn kết thường có một tập nhỏ các trường private, các methord trong lớp sẽ hoạt động trên những mảng đó
+- Nếu một nhiệm vụ sử dụng nhiều hơn một mảng thì sẽ có thể liên kết chặt chẽ với các mục tiêu tổng thể của lớp
 ---
 
 ### SỰ GẮN KẾT (CONHESION)
 - Ngược lại, nếu một nhiệm vụ không sử dụng bất kỳ mảng nào trong lớp thì không liên quan với các mục tiêu tổng thể của lớp, nên được di chuyển
--> Với các lớp nhỏ, nhà phát triển có thể di chuyển nhanh chóng trong các lớp họ quan tâm, cô lập các thay đổi, bảo trì và cải tiến dễ dàng hơn.
+-> Với các lớp nhỏ, nhà phát triển có thể di chuyển nhanh chóng trong các lớp họ quan tâm, cô lập các thay đổi, bảo trì và cải tiến dễ dàng hơn
 ---
 
 #### Yêu cầu của hệ thống phần mềm 
@@ -202,27 +202,27 @@ Một số yêu cầu về hệ thống phần mềm:
 ---
 
 #### NHỮNG THIẾT KẾ PHẦN MỀM KÉM
-**1)Thiết kế cứng nhắc(rigid designing)**
+**1)Thiết kế cứng nhắc (rigid designing)**
 -	Là thiết kế chống lại sự thay đổi
 -	Là thách thức trong thực tế vì mất nhiều nỗ lực để thay đổi
 -	Xác định các rủi ro trong tương lai khó khăn
 ---
 
 ####  NHỮNG THIẾT KẾ PHẦN MỀM KÉM
-**2)Thiết kế mong manh(design fragility)**
+**2)Thiết kế mong manh (design fragility)**
 -	Phát sinh khi có một thiết kế dễ bị phá vỡ
 -	Tạo ra nhiều giả định khi chạy chương trình
 ---
 
 ####  NHỮNG THIẾT KẾ PHẦN MỀM KÉM
-**3)Thiết kế bất động(immobility design)**
+**3)Thiết kế bất động (immobility design)**
 -	Các dòng code không độc đáo
 -	Thường được tìm kiếm và sao chép vào trong các hệ thống
 -	Tiềm ẩn nhiều rủi ro
 ---
 
 ####  NHỮNG THIẾT KẾ PHẦN MỀM KÉM
-**4)Thiết kế nhớt(viscous design)**
+**4)Thiết kế nhớt (viscous design)**
 -	Dễ vi phạm hơn là tuân tủ các quy tắc thiết kế
 -	Dễ bị hacker tấn công vào hệ thống
 ---
