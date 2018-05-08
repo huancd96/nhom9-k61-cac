@@ -45,34 +45,34 @@
 ---
 
 ### Hạn chế kiến trúc của REST
-- Hệ thống REST hoạt động theo mô hình client- server, trong đó server là tập hợp các service nhỏ lắng nghe các request từ client
+- Hệ thống REST hoạt động theo mô hình client- server (server là tập hợp các service nhỏ lắng nghe các request từ client)
 - Với từng yêu cầu khác nhau thì có thể một hoặc nhiều service xử lý
 - Các hệ thống dựa trên REST có nhiều mức độ về hạn chế kiến trúc
 ---
 
 ### Hạn chế kiến trúc của REST
 **1) Về việc thực hiện yêu cầu của ng dùng**
-- URI (định dạng tài nguyên thông nhất) cung cấp một cơ chế đơn giản và minh bạch để đặt tên các dịch vụ REST từ xa
-- Các dịch vụ dựa trên REST đều sử dụng phương pháp truy cập chuẩn để tham số hóa các yêu cầu được thực hiện từ client đến REST server
+- URI cung cấp một cơ chế đơn giản và minh bạch đặt tên các dịch vụ REST từ xa
+- Các dịch vụ REST đều dùng phương pháp truy cập chuẩn để tham số hóa các yêu cầu được thực hiện từ client đến REST server
 ---
 
 ### REST Development
 - Khi client yêu cầu URI từ xa sử dụng phương thức truy cập, server sẽ trả về mô tả của điều người dùng yêu cầu
 - Nhưng nếu họ đưa ra yêu cầu đến cùng một URI với phương pháp truy cập xóa, server sẽ chạy và xóa tài nguyên đó
-- Vì vậy bản chất của phương pháp truy cập mà người dùng chỉ định cùng với yêu cầu của họ là vô cùng có ý nghĩa
+-> Bản chất của phương pháp truy cập mà người dùng chỉ định cùng với yêu cầu của họ là vô cùng có ý nghĩa
 ---
 
 ### Hạn chế kiến trúc của REST
 **2) Về việc sử dụng đại diện trung gian**
-- Khó khăn kiến trúc tiếp theo là các server dựa trên REST giao tiếp sử dụng các đại diện trung gian
-- Khi REST muốn trả lời phản hồi,  nó sẽ tạo ra một đại diện của dữ liệu nội bộ của nó đó là amenable cho client sử dụng
--> Client chỉ có thể nhìn thấy định dạng của các tài liệu đang được gửi lại cho client trong đại diện trung gian này
+- Khó khăn kiến trúc tiếp theo là các server dựa trên REST sử dụng các đại diện trung gian
+- Khi REST muốn trả lời phản hồi, nó sẽ tạo ra một đại diện của dữ liệu nội bộ là amenable cho client sử dụng
+-> Client chỉ có thể nhìn thấy định dạng của tài liệu đang được gửi lại trong đại diện trung gian này
 ---
 
 ### Hạn chế kiến trúc của REST
 **3) Về văn bản tự mô tả**
 - Rào cản kiến trúc cuối cùng là REST dựa trên tài liệu văn bản tự mô tả
-- phản hồi từ một server, ngoài dữ liệu cũng gửi các link chuyển tiếp khác giúp bạn hiểu các hành động khác bạn có thể làm với kiểu dữ liệu phản hồi này
+- phản hồi từ một server, ngoài dữ liệu còn có các link chuyển tiếp khác giúp bạn hiểu các hành động bạn có thể làm với dữ liệu phản hồi này
 -> chúng ta phải làm các dịch vụ REST trở thành “no state”, làm tăng khả năng mở rộng của chúng.
 
 ### Các phương thức chủ yếu trong REST
@@ -111,7 +111,7 @@
 
 ### REST Development
 - XML là một định dạng giao hoán cũ hơn, cho phép các đối tượng phức tạp được mô tả trong một trường hợp cực phức tạp
-- JSON được sử dụng trong trường hợp bạn muốn đối tượng phản hồi được phân tích cú pháp trực tiếp trong một trình duyệt web hoặc trong nút, (vì mọi đối tượng JSON cũng là một đối tượng JavaScript)
+- JSON được sử dụng khi bạn muốn đối tượng phản hồi được phân tích cú pháp trực tiếp trong một trình duyệt web hoặc node, (vì mọi đối tượng JSON cũng là một đối tượng JavaScript)
 ---
 
 ### Giao tiếp phi trạng thái (stateless communication)
@@ -146,14 +146,14 @@
 ### Chú ý
 - API REST nên nhỏ để không rò rỉ chi tiết thực hiện nội bộ.
 - Ngoài ra, nên xem xét khả năng sử dụng của chúng để khách hàng có thể sử dụng hiệu quả.
-- Với việc thiết kế một API linh hoạt, API của bạn có thể được sử dụng bởi nhiều client khác nhau bằng nhiều cách khác nhau
+- Với một API linh hoạt, API có thể được sử dụng bởi nhiều client khác nhau bằng nhiều cách khác nhau
 -> Tăng tính linh hoạt cho client.
 ---
 
 ### GHÉP NỐI (COUPLING)
 - Ghép nối là độ đo của độ phụ thuộc lẫn nhau giữa các lớp trong chương trình máy tính.
 - Ghép nối thực sự là vấn đề trong thực tế bởi vì có một ảnh hưởng mạnh mẽ đến cách duy trì và cải tiến hệ thống
-- Lý do: Với một lớp chương trình chặt chẽ cùng với một lớp khác, thực hiện thay đổi lớp đó có thể gây ra lỗi trong các lớp khác.
+- Lý do: Với một lớp chương trình chặt chẽ với một lớp khác, thực hiện thay đổi lớp đó có thể gây ra lỗi trong các lớp khác.
 ---
 
 ### GHÉP NỐI (COUPLING)
@@ -179,7 +179,8 @@
 - Các lớp có độ gắn kết thấp, chịu trách nhiệm cho một loạt các hành động đa dạng.
 -> Khó khăn cho một nhà phát triển khi nhìn vào một lớp và thực sự hiểu những gì đang thực hiện.
 - Cản trở việc duy trì và phát triển phần mềm.
-- Nhiệm vụ của từng lớp càng rõ ràng và tách biệt thì cohesion càng cao (high cohesion), đó là mục tiêu cần đạt tới khi thiết kế
+- Nhiệm vụ của từng lớp càng rõ ràng và tách biệt thì cohesion càng cao (high cohesion)
+-> Đó là mục tiêu cần đạt tới 
 ---
 
 ### SỰ GẮN KẾT (CONHESION)
@@ -189,7 +190,7 @@
 
 ### SỰ GẮN KẾT (CONHESION)
 - Ngược lại, nếu một nhiệm vụ không sử dụng bất kỳ mảng nào trong lớp thì không liên quan với các mục tiêu tổng thể của lớp, nên được di chuyển
--> Với các lớp nhỏ ,nhà phát triển có thể di chuyển nhanh chóng trong các lớp họ quan tâm, cô lập các thay đổi, bảo trì và cải tiến dễ dàng hơn.
+-> Với các lớp nhỏ, nhà phát triển có thể di chuyển nhanh chóng trong các lớp họ quan tâm, cô lập các thay đổi, bảo trì và cải tiến dễ dàng hơn.
 ---
 
 #### Yêu cầu của hệ thống phần mềm 
@@ -238,13 +239,13 @@ Một số yêu cầu về hệ thống phần mềm:
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
 - Tính linh hoạt của các hệ thống phần mềm nghĩa là chúng có thể được thiết kế theo nhiều cách khác nhau.
-- Hệ thống cần dễ hiểu, nhanh chóng chẩn đoán và sửa chữa, và chịu trách nhiệm cho sự thay đổi trong tương lai, khi muốn thêm các tính năng mới.
+- Hệ thống cần dễ hiểu, dễ chẩn đoán và sửa chữa, chịu trách nhiệm cho sự thay đổi trong tương lai, khi muốn thêm các tính năng mới.
 ---
 
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
-- Tất cả các hệ thống bắt đầu theo cách này khi chỉ có một dòng mã, nó rất dễ hiểu, dễ sửa chữa,Và phù hợp với những thay đổi trong tương lai.
-- Nhưng theo thời gian, khi thêm các tính năng mới, sẽ mở rộng thiết kế, vi phạm thiết kế, làm rõ các tính năng đã có trong đó.
-- Và điều này làm cho mã khó hơn và khó hơn để duy trì.
+- Tất cả các hệ thống bắt đầu theo cách này khi chỉ có một dòng mã, dễ hiểu, dễ sửa chữa, phù hợp với những thay đổi
+- Nhưng khi thêm các tính năng mới, sẽ mở rộng thiết kế, vi phạm thiết kế, làm rõ các tính năng đã có trong đó.
+- Điều này làm cho mã khó hơn và khó hơn để duy trì.
 ---
 
 #### Nguyên tắc đơn nhiệm (Simple responcibility princibles)
@@ -254,17 +255,7 @@ Một số yêu cầu về hệ thống phần mềm:
 ---
 
 #### Nguyên tắc đơn nhiệm (Simple responcibility princibles)
-- Nguyên tắc duy nhất về trách nhiệm nói là một mô-đun phần mềm nên làm một việc và nên làm tốt.
-- Điều này nghe có vẻ đơn giản, nhưng trên thực tế thường cám dỗ để thêm chức năng mới vào các mô-đun hiện có thay vì tạo các mô-đun mới từ đầu.
----
-
-#### Nguyên tắc đơn nhiệm (Simple responcibility princibles)
-
-- Có một số mẫu thiết kế thực sựgiúp chúng tôi thực thi hoặc cải thiện khả năng mã của chúng tôi tuân theo nguyên tắc trách nhiệm duy nhất.
-- Thứ nhất là mô hình chiến lược, điều này thúc đẩy chúng ta hướng tới các thuật toán nhỏ, độc lập.
----
-
-#### Nguyên tắc đơn nhiệm (Simple responcibility princibles)
+- Mô hình chiến lược thúc đẩy chúng ta hướng tới các thuật toán nhỏ, độc lập.
 - Các mô hình lệnh giúp chúng tôi để trừu tượng các hành động một đối tượng mất từ việc thực hiện nội bộ.
 - Giúp trừu tượng đi hành động của đối tượng ở các trạng thái khác nhau có thể thay đổi tự động khi chạy.
 ---
@@ -294,7 +285,7 @@ Một số yêu cầu về hệ thống phần mềm:
 
 #### Nguyên tắc khả dĩ thay thế (Liskov substitution principle (LSP) )
 - Các instance của lớp con thay thế được instance lớp cha mà vẫn đảm bảo tính đúng đắn của chương trình.
-- Đảm bảo các instance của lớp con có thể thay thế instance của lớp cha mà chương trình vẫn chạy ổn định khi mở rộng phần mềm bằng các lớp con kế thừa
+- Các instance của lớp con có thể thay của lớp cha mà chương trình vẫn chạy ổn định khi mở rộng phần mềm bằng các lớp con kế thừa
 - Đảm bảo rằng các lớp con có thể chạy được đúng những functions lớp cha đã cung cấp 
 ---
 
