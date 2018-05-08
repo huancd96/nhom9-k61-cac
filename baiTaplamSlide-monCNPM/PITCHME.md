@@ -8,7 +8,7 @@
 #### NGUYÊN TẮC THIẾT KẾ: RẮN (SOLID)
 ---
 
-### sau vô số lần gọi, nó vẫn trả về kết quả như nhau
+### RPC
 - Khoảng những năm 1970 xuất hiện 1 giải pháp truyền tin hướng có tên là RPC.
 - RPC viết tắt của cụm từ Remote Procedure Calls (tạm dịch là các cuộc gọi thủ tục từ xa).
 ---
@@ -16,7 +16,7 @@
 ### Một số vấn đề của RPC
 
 
- 1) Không linh hoạt thay đổi kể từ khi nó giả định một mối quan hệ tĩnh giữa máy khách và máy chủ tại thời gian chạy, điều này gây ra các mã số máy khách và máy chủ được kết chặt với nhau,
+ 1) Không linh hoạt thay đổi kể từ khi nó giả định một mối quan hệ tĩnh giữa máy khách và máy chủ tại thời gian chạy
  
  2) RPC được dựa trên mô hình lập trình thủ tục/ cấu trúc, nó đã lỗi thời với các mô hình hướng đối tượng,
  
